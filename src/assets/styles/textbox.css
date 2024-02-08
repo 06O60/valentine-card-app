@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'Riffic Free Bold';
+	src: url('../fonts/RifficFree-Bold.ttf');
+}
+
+.text-box {
+	position: relative;
+	display: flex;
+	width: 63vw;
+	height: 23vh;
+	min-width: 400px;
+	min-height: 200px;
+	max-height: 30%;
+	max-width: auto;
+	margin-bottom: 1rem;
+}
+
+.distorted-font {
+	font-family: 'Courier-Bold';
+	font-weight: 600;
+	font-size: 1.8rem;
+	text-shadow: 0.35rem 0 black, 0 0.35rem black, 0.35rem 0 black,
+		0 -0.35rem black, -0.35rem -0.35rem black, 0.35rem 0.35rem black,
+		-0.35rem 0.35rem black, 0.35rem -0.35rem black;
+	color: white;
+	z-index: 999;
+}
+
+.character {
+	position: absolute;
+	top: -2.5rem;
+	left: 2rem;
+	padding: 0.5rem 2.5rem 0.6rem 2.5rem;
+
+	background: rgb(255, 255, 255, 0.8);
+	border-radius: 0.7rem;
+
+	text-shadow: -0.2rem -0.2rem 0 #ac618d,
+		/* Top left */ 0.19rem -0.2rem 0 #ac618d,
+		/* Top right */ -0.19rem 0.2rem 0 #ac618d,
+		/* Bottom left */ 0.19rem 0.2rem 0 #ac618d; /* Bottom right */
+	font-size: 1.5rem;
+	font-family: 'Riffic Free Bold';
+	color: white;
+}
+.text-field {
+	background-image: url('../images/normal/textbox.png');
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+	overflow: hidden;
+	overflow-wrap: break-word;
+
+	flex-grow: 1;
+	border: 0.2rem solid white;
+	border-radius: 1rem;
+	padding: 2.2rem;
+	z-index: 999;
+}
