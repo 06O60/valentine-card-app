@@ -3,6 +3,5 @@
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 51vw;
-	min-width: 50vw;
+	height: 100%;
 }
