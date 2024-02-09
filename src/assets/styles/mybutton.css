@@ -1,8 +1,10 @@
 .main-button {
+	top: 25%;
+	margin-bottom: 2rem;
 	color: black;
 	font-family: 'Aller';
 	width: 30vw;
-	border: 0.1rem solid #ffd3de;
+	border: 0.2rem solid #e9bfdc;
 	min-width: 10rem;
 	min-height: 1rem;
 }

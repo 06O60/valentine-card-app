@@ -6,8 +6,10 @@ function App() {
 	return (
 		<div className="App">
 			<main>
-				<MyButton text="Yes" />
-				<MyButton text="No" />
+				<div className="buttons">
+					<MyButton text="Yes" />
+					<MyButton text="No" />
+				</div>
 				<Character />
 				<TextBox
 					character="Monika"

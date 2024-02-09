@@ -1,12 +1,16 @@
-body {
-	/*display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: flex-end;*/
-}
 .App,
 main {
 	width: 100%;
 	height: 100%;
+	display: flex; /* I'm not sure why without it, the backhround image is miscentered*/
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.buttons {
+	margin-top: 25vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
