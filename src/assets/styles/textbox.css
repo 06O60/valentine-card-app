@@ -2,7 +2,10 @@
 	font-family: 'Riffic Free Bold';
 	src: url('../fonts/RifficFree-Bold.ttf');
 }
-
+@font-face {
+	font-family: 'Aller';
+	src: url('../fonts/Aller.ttf');
+}
 .text-box {
 	position: relative;
 	display: flex;
@@ -15,15 +18,23 @@
 	margin-bottom: 1rem;
 }
 
-.distorted-font {
-	font-family: 'Courier-Bold';
-	font-weight: 600;
+.dialog-text {
+	font-weight: 500;
 	font-size: 1.8rem;
+	color: white;
+	z-index: 999;
+}
+.normal {
+	font-family: 'Aller';
+	text-shadow: 0.2rem 0 black, 0 0.15rem black, 0.15rem 0 black,
+		0 -0.15rem black, -0.15rem -0.15rem black, 0.15rem 0.15rem black,
+		-0.2rem 0.2rem black, 0.2rem -0.2rem black;
+}
+.distorted {
+	font-family: 'Courier-Bold';
 	text-shadow: 0.35rem 0 black, 0 0.35rem black, 0.35rem 0 black,
 		0 -0.35rem black, -0.35rem -0.35rem black, 0.35rem 0.35rem black,
 		-0.35rem 0.35rem black, 0.35rem -0.35rem black;
-	color: white;
-	z-index: 999;
 }
 
 .character {

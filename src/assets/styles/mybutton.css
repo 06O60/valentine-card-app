@@ -1,0 +1,13 @@
+.main-button {
+	color: black;
+	font-family: 'Aller';
+	width: 30vw;
+	border: 0.1rem solid #ffd3de;
+	min-width: 10rem;
+	min-height: 1rem;
+}
+
+.main-button:hover {
+	cursor: pointer;
+	color: #ffc5ca;
+}

@@ -5,7 +5,7 @@ const TextBox = ({ character, text }) => {
 		<div className="text-box">
 			<p className="character">{character}</p>
 			<div className="text-field">
-				<p className="distorted-font">{text}</p>
+				<p className="normal dialog-text">{text}</p>
 			</div>
 		</div>
 	);
