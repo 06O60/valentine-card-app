@@ -6,7 +6,7 @@ const Character = () => {
 		<img
 			src={monicaSidewaysImage}
 			alt="Monica sideways"
-			class="character-sprite"
+			className="character-sprite"
 		/>
 	);
 };
