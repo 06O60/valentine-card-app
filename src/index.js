@@ -5,15 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import messages from './assets/messages/messages.json';
 import messagesTypes from './assets/messages/types.json';
-
+import { mapByTypes, sortMessagesByType } from './utils/messageHandler.js';
 //TO DO: change the method of getting messages and messages types, so that it is not preloaded.
 
+console.log(sortMessagesByType(messages));
+//));
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+/*root.render(
 	<React.StrictMode>
-		<App messages={messages} messagesTypes={messagesTypes} />
+		<App
+			messages={sortMessagesByType(messages)}
+			messagesTypes={mapByTypes(messagesTypes)}
+		/>
 	</React.StrictMode>
-);
+);*/
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
