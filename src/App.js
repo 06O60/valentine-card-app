@@ -31,8 +31,8 @@ function App({ messages, messagesTypes }) {
 		<div className="App">
 			<main>
 				<div className="buttons">
-					<MyButton text="Yes" />
-					<MyButton text="No" />
+					<MyButton text="Yes" onButtonClick={handleClick} />
+					<MyButton text="No" onButtonClick={handleClick} />
 				</div>
 				<Character />
 				<TextBox character="Monika" text={message} />
