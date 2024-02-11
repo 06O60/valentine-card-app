@@ -1,9 +1,11 @@
 import React from 'react';
 import '../assets/styles/mybutton.css';
-const MyButton = ({ text, onButtonClick }) => {
+
+//how to actually make ids work?
+const MyButton = ({ text, onButtonClick, buttonId }) => {
 	return (
 		<button
-			className="main-button dialog-text"
+			className={'dialog-text ' + buttonId}
 			onClick={button => {
 				onButtonClick(button.target.innerText);
 			}}

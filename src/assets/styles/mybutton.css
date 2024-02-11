@@ -1,15 +1,18 @@
-.main-button {
-	top: 25%;
+.btn1,
+.btn2 {
+	position: relative;
 	margin-bottom: 2rem;
 	color: black;
 	font-family: 'Aller';
-	width: 30vw;
+	width: 30%;
 	border: 0.2rem solid #e9bfdc;
-	min-width: 10rem;
-	min-height: 1rem;
+	min-width: 15rem;
+	min-height: 3rem;
+	max-height: 50%;
 }
 
-.main-button:hover {
+.btn1:hover,
+.btn2:hover {
 	cursor: pointer;
 	color: #ffc5ca;
 }
