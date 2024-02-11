@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './assets/styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import messages from './assets/messages/messages.json';
+import messagesTypes from './assets/messages/types.json';
+
+//TO DO: change the method of getting messages and messages types, so that it is not preloaded.
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<App />
+		<App
+			messages={JSON.parse(messages)}
+			messagesTypes={JSON.parse(messagesTypes)}
+		/>
 	</React.StrictMode>
 );
 
