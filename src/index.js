@@ -11,10 +11,7 @@ import messagesTypes from './assets/messages/types.json';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<App
-			messages={JSON.parse(messages)}
-			messagesTypes={JSON.parse(messagesTypes)}
-		/>
+		<App messages={messages} messagesTypes={messagesTypes} />
 	</React.StrictMode>
 );
 
