@@ -1,5 +1,4 @@
 const fs = require('fs').promises;
-let messageCount = 0;
 //TO DO: implement possibility to enter the fileName from the console.
 
 async function jsonifyMessages(fileName) {
@@ -28,7 +27,7 @@ function jsonifyType(messages) {
 	messages = messages.slice(1);
 
 	messages = messages.map(message => {
-		return `"message${messageCount++}": {"type": "${type}",\n "text": "${message}"}`;
+		return `{"type": "${type}",\n "text": "${message}"}`;
 	});
 
 	return messages.join(',\n');
@@ -40,7 +39,7 @@ function jsonifyData(data) {
 		return jsonifyType(messages);
 	});
 	console.log(data);
-	return `{\n${data.join(',\n')} }`;
+	return `[\n${data.join(',\n')} \n]`;
 }
 
-export default jsonifyMessages;
+jsonifyMessages('src/assets/message_parser/messages.txt');

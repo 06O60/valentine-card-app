@@ -52,10 +52,10 @@ async function jsonifyData(data) {
 	let id = -1;
 	types = types.map(type => {
 		id++;
-		return `"type${id}":\n ${parseType(type)} `;
+		return `${parseType(type)} `;
 	});
 
-	return '{\n' + types.join(',\n') + '}\n';
+	return '[\n' + types.join(',\n') + ']\n';
 }
 
-export default jsonifyTypes;
+jsonifyTypes('src/assets/message_parser/message_types.txt');
