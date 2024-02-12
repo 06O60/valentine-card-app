@@ -28,18 +28,17 @@ function App({ messages, typesMap }) {
 		console.log('Yay! Thank you!');
 	}
 	function handleNo() {
-		console.log('No clicked...');
-		changeDialog();
-		setSpriteByType(typesMap.get(messageData.type), setSprite);
+		const newMessage = getRandomMessage(messages);
+		setSpriteByType(typesMap.get(newMessage.type), setSprite);
+		changeDialog(newMessage);
 		changeObstacle();
 	}
 	function showEnd() {
 		console.log('Show end TBI');
 	}
-	function changeDialog() {
-		const newMessage = getRandomMessage(messages);
-		setTextStylingByType(newMessage.type, setTextStyling);
+	function changeDialog(newMessage) {
 		setMessageData(newMessage);
+		setTextStylingByType(newMessage.type, setTextStyling);
 	}
 	function changeObstacle() {
 		/*const btn = document.getElementsByClassName('btn1')[0];
