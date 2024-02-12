@@ -1,5 +1,5 @@
 import './assets/styles/App.css';
-import TextBox from './components/TextBox.js';
+import TextBox, { setTextStylingByType } from './components/TextBox.js';
 import MyButton from './components/MyButton.js';
 import Character from './components/Character.js';
 import { useState } from 'react';
@@ -11,6 +11,7 @@ function App({ messages, typesMap }) {
 		type: 'Normal',
 		text: 'Will you be my valentine...?'
 	});
+	const [textStyling, setTextStyling] = useState('normal dialog-text');
 	const upperBtn = document.getElementsByClassName('btn1')[0];
 	const lowerBtn = document.getElementsByClassName('btn2')[1];
 
@@ -34,14 +35,16 @@ function App({ messages, typesMap }) {
 		console.log('Show end TBI');
 	}
 	function changeDialog() {
-		setMessageData(getRandomMessage(messages));
+		const newMessage = getRandomMessage(messages);
+		setTextStylingByType(newMessage.type, setTextStyling);
+		setMessageData(newMessage);
 	}
 	function changeSprite() {
 		console.log('TBI');
 	}
 	function changeObstacle() {
-		const btn = document.getElementsByClassName('btn1')[0];
-		obstacles.makeButtonBigger(btn);
+		/*const btn = document.getElementsByClassName('btn1')[0];
+		obstacles.makeButtonBigger(btn5*/
 	}
 
 	return (
@@ -61,7 +64,11 @@ function App({ messages, typesMap }) {
 				</div>
 				<Character />
 				<div className="text container">
-					<TextBox character="Monika" text={messageData.text} />
+					<TextBox
+						character="Monika"
+						text={messageData.text}
+						textStyling={textStyling}
+					/>
 				</div>
 			</main>
 		</div>

@@ -1,14 +1,29 @@
 import React from 'react';
 import '../assets/styles/textbox.css';
-const TextBox = ({ character, text }) => {
+const TextBox = ({ character, text, textStyling }) => {
 	return (
 		<div className="text-box">
 			<p className="character">{character}</p>
 			<div className="text-field">
-				<p className="normal dialog-text">{text}</p>
+				<p className={textStyling}>{text}</p>
 			</div>
 		</div>
 	);
 };
 
+export function setTextStylingByType(type, setTextStyling) {
+	let textStyling = '';
+	switch (type) {
+		case 'Monica-3rd-wall':
+			textStyling = 'distorted dialog-text';
+			break;
+		case 'Programmer-humor':
+			textStyling = 'error dialog-text';
+			if (Math.random() < 0.5) textStyling += ' distorted';
+			break;
+		default:
+			textStyling = 'normal dialog-text';
+	}
+	setTextStyling(textStyling);
+}
 export default TextBox;
