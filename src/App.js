@@ -1,7 +1,8 @@
 import './assets/styles/App.css';
 import TextBox, { setTextStylingByType } from './components/TextBox.js';
 import MyButton from './components/MyButton.js';
-import Character from './components/Character.js';
+import Character, { setSpriteByType } from './components/Character.js';
+import defaultSprite from './assets/images/normal/monica-sideways.webp';
 import { useState } from 'react';
 import { getRandomMessage } from './utils/messageHandler.js';
 const obstacles = require('./utils/obstacles.js');
@@ -12,6 +13,7 @@ function App({ messages, typesMap }) {
 		text: 'Will you be my valentine...?'
 	});
 	const [textStyling, setTextStyling] = useState('normal dialog-text');
+	const [sprite, setSprite] = useState(defaultSprite);
 	const upperBtn = document.getElementsByClassName('btn1')[0];
 	const lowerBtn = document.getElementsByClassName('btn2')[1];
 
@@ -28,7 +30,7 @@ function App({ messages, typesMap }) {
 	function handleNo() {
 		console.log('No clicked...');
 		changeDialog();
-		changeSprite();
+		setSpriteByType(typesMap.get(messageData.type), setSprite);
 		changeObstacle();
 	}
 	function showEnd() {
@@ -38,9 +40,6 @@ function App({ messages, typesMap }) {
 		const newMessage = getRandomMessage(messages);
 		setTextStylingByType(newMessage.type, setTextStyling);
 		setMessageData(newMessage);
-	}
-	function changeSprite() {
-		console.log('TBI');
 	}
 	function changeObstacle() {
 		/*const btn = document.getElementsByClassName('btn1')[0];
@@ -62,7 +61,7 @@ function App({ messages, typesMap }) {
 						buttonId={'btn2'}
 					/>
 				</div>
-				<Character />
+				<Character currentSprite={sprite} />
 				<div className="text container">
 					<TextBox
 						character="Monika"

@@ -11,7 +11,8 @@ const TextBox = ({ character, text, textStyling }) => {
 	);
 };
 
-export function setTextStylingByType(type, setTextStyling) {
+export function setTextStylingByType(typeDescription, setTextStyling) {
+	const type = typeDescription.type;
 	let textStyling = '';
 	switch (type) {
 		case 'Monica-3rd-wall':
