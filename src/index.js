@@ -14,7 +14,7 @@ messagesTypes = mapByTypes(messagesTypes);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<App messages={messages} messagesTypes={messagesTypes} />
+		<App messages={messages} typesMap={messagesTypes} />
 	</React.StrictMode>
 );
 
