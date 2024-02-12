@@ -1,31 +1,44 @@
 [
-{"type": "Normal",
-"glitchChance": 0,
-"jumpscareChance": 0,
-"posture": "flirty-sideways",
-"emotions": ["happy", "cutesy"]} ,
-{"type": "Passive-aggressive",
-"glitchChance": 0,
-"jumpscareChance": 0,
-"posture": "flirty-sideways",
-"emotions": ["happy", "cutesy"]} ,
-{"type": "Monica-cutesy",
-"glitchChance": 0,
-"jumpscareChance": 0,
-"posture": "flirty-sideways",
-"emotions": ["happy", "cutesy"]} ,
-{"type": "Monica-3rd-wall",
-"glitchChance": 0.4,
-"jumpscareChance": 0.2,
-"posture": "lecturing-front",
-"emotions": ["eccentric", "hopeless"]} ,
-{"type": "Programmer-humor",
-"glitchChance": 0.7,
-"jumpscareChance": 0.1,
-"posture": "lecturing-front",
-"emotions": ["eccentric", "scared", "flustered"]} ,
-{"type": "End",
-"glitchChance": 0.5,
-"jumpscareChance": 0,
-"posture": "flirty-sideways",
-"emotions": ["happy", "eccentric", "cutesy", "flustered"]} ]
+	{
+		"type": "Normal",
+		"glitchChance": 0,
+		"jumpscareChance": 0,
+		"posture": "flirty",
+		"emotions": ["happy", "cutesy"]
+	},
+	{
+		"type": "Passive-aggressive",
+		"glitchChance": 0,
+		"jumpscareChance": 0,
+		"posture": "flirty",
+		"emotions": ["happy", "cutesy"]
+	},
+	{
+		"type": "Monica-cutesy",
+		"glitchChance": 0,
+		"jumpscareChance": 0,
+		"posture": "flirty",
+		"emotions": ["happy", "cutesy"]
+	},
+	{
+		"type": "Monica-3rd-wall",
+		"glitchChance": 0.4,
+		"jumpscareChance": 0.2,
+		"posture": "lecturing",
+		"emotions": ["eccentric", "hopeless"]
+	},
+	{
+		"type": "Programmer-humor",
+		"glitchChance": 0.7,
+		"jumpscareChance": 0.1,
+		"posture": "lecturing",
+		"emotions": ["eccentric", "scared", "flustered"]
+	},
+	{
+		"type": "End",
+		"glitchChance": 0.5,
+		"jumpscareChance": 0,
+		"posture": "flirty",
+		"emotions": ["happy", "eccentric", "cutesy", "flustered"]
+	}
+]
