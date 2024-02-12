@@ -24,17 +24,20 @@ function App({ messages, typesMap }) {
 			handleNo();
 		}
 	}
+
 	function handleYes() {
 		console.log('Yay! Thank you!');
 	}
-	function handleNo() {
-		const newMessage = getRandomMessage(messages);
-		setSpriteByType(typesMap.get(newMessage.type), setSprite);
-		changeDialog(newMessage);
-		changeObstacle();
-	}
 	function showEnd() {
 		console.log('Show end TBI');
+	}
+
+	function handleNo() {
+		const newMessage = getRandomMessage(messages);
+
+		changeDialog(newMessage);
+		setSpriteByType(typesMap.get(newMessage.type), setSprite);
+		changeObstacle();
 	}
 	function changeDialog(newMessage) {
 		setMessageData(newMessage);
