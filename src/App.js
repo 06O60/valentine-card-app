@@ -5,7 +5,7 @@ import Character, { setSpriteByType } from './components/Character.js';
 import defaultSprite from './assets/images/normal/monica-sideways.webp';
 import { useState } from 'react';
 import { getRandomMessage } from './utils/messageHandler.js';
-const obstacles = require('./utils/obstacles.js');
+import getRandomObstacle from './utils/obstacles.js';
 
 function App({ messages, typesMap }) {
 	const [messageData, setMessageData] = useState({
@@ -14,8 +14,6 @@ function App({ messages, typesMap }) {
 	});
 	const [textStyling, setTextStyling] = useState('normal dialog-text');
 	const [sprite, setSprite] = useState(defaultSprite);
-	const upperBtn = document.getElementsByClassName('btn1')[0];
-	const lowerBtn = document.getElementsByClassName('btn2')[1];
 
 	function handleClick(buttonMsg) {
 		if (buttonMsg === 'Yes') {
@@ -37,17 +35,19 @@ function App({ messages, typesMap }) {
 
 		changeDialog(newMessage);
 		setSpriteByType(typesMap.get(newMessage.type), setSprite);
-		changeObstacle();
+		setObstacle();
+	}
+	function setObstacle() {
+		let obstacleFun = getRandomObstacle();
+		const upperBtn = document.getElementsByClassName('btn1')[0];
+		const lowerBtn = document.getElementsByClassName('btn2')[0];
+		let cleanupFunc = obstacleFun(upperBtn, lowerBtn);
+		if (cleanupFunc) cleanupFunc();
 	}
 	function changeDialog(newMessage) {
 		setTextStylingByType(typesMap.get(newMessage.type), setTextStyling);
 		setMessageData(newMessage);
 	}
-	function changeObstacle() {
-		/*const btn = document.getElementsByClassName('btn1')[0];
-		obstacles.makeButtonBigger(btn5*/
-	}
-
 	return (
 		<div className="App">
 			<main>
