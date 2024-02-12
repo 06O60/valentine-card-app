@@ -40,8 +40,8 @@ function App({ messages, typesMap }) {
 		changeObstacle();
 	}
 	function changeDialog(newMessage) {
+		setTextStylingByType(typesMap.get(newMessage.type), setTextStyling);
 		setMessageData(newMessage);
-		setTextStylingByType(newMessage.type, setTextStyling);
 	}
 	function changeObstacle() {
 		/*const btn = document.getElementsByClassName('btn1')[0];
