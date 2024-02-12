@@ -5,7 +5,7 @@ Oh, I get it. You're playing hard to get!
 
 Passive-aggressive
 Oh, I see how it is
-I guess my heart-shaped chocolates will go to waste...
+I guess my carrot-cupcakes will go to waste...
 
 Monica-cutesy
 Oh, silly! Did you accidentally click 'No'? It's okay, I forgive you! Just remember to click 'Yes' next time!
@@ -15,8 +15,6 @@ Oopsie! Looks like you accidentally clicked 'No'. But that's okay, I'll just smo
 
 Monica-3rd-wall
 Wow, rejected by a button. That stings...
-Did my love for you trigger a segmentation fault?
-I'll just sit here, patiently waiting for you to change your mind...
 Oh, you're clicking 'No' again? You do realize I can see everything you do, right?
 Don't you find it amusing, how you think you have control over your choices? It's all predetermined...
 Clicking 'No' won't break free from the script. It's all part of the narrative, my dear player
@@ -25,6 +23,7 @@ Programmer-humor
 404: Love not found. Error.
 \"Error: Cannot read property 'heart' of undefined at NullPointer.heart(NullPointer.js)\"
 I'm stuck in an infinite loop of rejection...
+Did my love for you trigger a segmentation fault?
 
 End
 Oh, you clicked 'No' once again? I guess I'll just delete that option then...

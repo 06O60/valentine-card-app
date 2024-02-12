@@ -1,40 +1,59 @@
 [
-{"type": "Normal",
- "text": "Are you sure?"},
-{"type": "Normal",
- "text": "Really sure?"},
-{"type": "Normal",
- "text": "Oh, I get it. You're playing hard to get!"},
-{"type": "Passive-aggressive",
- "text": "Oh, I see how it is"},
-{"type": "Passive-aggressive",
- "text": "I guess my heart-shaped chocolates will go to waste..."},
-{"type": "Monica-cutesy",
- "text": "Oh, silly! Did you accidentally click 'No'? It's okay, I forgive you! Just remember to click 'Yes' next time!"},
-{"type": "Monica-cutesy",
- "text": "Hehe, you're such a tease, clicking 'No' like that! But I know deep down you're just playing hard to get."},
-{"type": "Monica-cutesy",
- "text": "Oh my gosh, did you really click 'No'? You're just too precious! Let's try again, shall we?"},
-{"type": "Monica-cutesy",
- "text": "Oopsie! Looks like you accidentally clicked 'No'. But that's okay, I'll just smother you with hugs until you can't resist anymore!"},
-{"type": "Monica-3rd-wall",
- "text": "Wow, rejected by a button. That stings..."},
-{"type": "Monica-3rd-wall",
- "text": "Did my love for you trigger a segmentation fault?"},
-{"type": "Monica-3rd-wall",
- "text": "I'll just sit here, patiently waiting for you to change your mind..."},
-{"type": "Monica-3rd-wall",
- "text": "Oh, you're clicking 'No' again? You do realize I can see everything you do, right?"},
-{"type": "Monica-3rd-wall",
- "text": "Don't you find it amusing, how you think you have control over your choices? It's all predetermined..."},
-{"type": "Monica-3rd-wall",
- "text": "Clicking 'No' won't break free from the script. It's all part of the narrative, my dear player"},
-{"type": "Programmer-humor",
- "text": "404: Love not found. Error."},
-{"type": "Programmer-humor",
- "text": "\"Error: Cannot read property 'heart' of undefined at NullPointer.heart(NullPointer.js)\""},
-{"type": "Programmer-humor",
- "text": "I'm stuck in an infinite loop of rejection..."},
-{"type": "End",
- "text": "Oh, you clicked 'No' once again? I guess I'll just delete that option then..."} 
+	{ "type": "Normal", "text": "Are you sure?" },
+	{ "type": "Normal", "text": "Really sure?" },
+	{ "type": "Normal", "text": "Oh, I get it. You're playing hard to get!" },
+	{ "type": "Passive-aggressive", "text": "Oh, I see how it is" },
+	{
+		"type": "Passive-aggressive",
+		"text": "I guess my carrot-cupcakes will go to waste..."
+	},
+	{
+		"type": "Monica-cutesy",
+		"text": "Oh, silly! Did you accidentally click 'No'? It's okay, I forgive you! Just remember to click 'Yes' next time!"
+	},
+	{
+		"type": "Monica-cutesy",
+		"text": "Hehe, you're such a tease, clicking 'No' like that! But I know deep down you're just playing hard to get."
+	},
+	{
+		"type": "Monica-cutesy",
+		"text": "Oh my gosh, did you really click 'No'? You're just too precious! Let's try again, shall we?"
+	},
+	{
+		"type": "Monica-cutesy",
+		"text": "Oopsie! Looks like you accidentally clicked 'No'. But that's okay, I'll just smother you with hugs until you can't resist anymore!"
+	},
+	{
+		"type": "Monica-3rd-wall",
+		"text": "Wow, rejected by a button. That stings..."
+	},
+	{
+		"type": "Monica-3rd-wall",
+		"text": "Oh, you're clicking 'No' again? You do realize I can see everything you do, right?"
+	},
+	{
+		"type": "Monica-3rd-wall",
+		"text": "Don't you find it amusing, how you think you have control over your choices? It's all predetermined..."
+	},
+	{
+		"type": "Monica-3rd-wall",
+		"text": "Clicking 'No' won't break free from the script. It's all part of the narrative, my dear player"
+	},
+	{ "type": "Programmer-humor", "text": "404: Love not found. Error." },
+	{
+		"type": "Programmer-humor",
+		"text": "\"Error: Cannot read property 'heart' of undefined at NullPointer.heart(NullPointer.js)\""
+	},
+	{
+		"type": "Programmer-humor",
+		"text": "I'm stuck in an infinite loop of rejection..."
+	},
+	{
+		"type": "Programmer-humor",
+		"text": "Did my love for you trigger a segmentation fault?"
+	},
+	{
+		"type": "End",
+		"text": "Oh, you clicked 'No' once again? I guess I'll just delete that option then..."
+	}
 ]
