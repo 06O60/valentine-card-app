@@ -10,36 +10,45 @@ const obstacles = [
 		button.style.width = `${initialHeight + sizeIncrease}px`;
 	},
 	function switchButtons(button1, button2) {
+		console.log('Switching buttons');
 		const tmp = button1.innerText;
 		button1.innerText = button2.innerText;
 		button2.innerText = tmp;
 	},
 	function changeToYesOnHover(button1, button2, noCount) {
-		/*TO DO: fix the bug, when clicked on no button correctly, and then quickly mouse off the button, we get two no's)*/
+		console.log('Changing to yes');
 		let button = button1;
 		if (button1.innerText === 'Yes') button = button2;
 
 		let originalContent = button.innerText;
-		console.log(originalContent);
 		let timeoutId;
 		let speed = 350;
 		if (noCount < 10) speed = 500;
 
-		const cleanup = () => {
-			console.log('Clean up or nah?');
-			console.log(button);
-			console.log(originalContent);
-			button.innerText = originalContent;
-			if (timeoutId) clearTimeout(timeoutId);
-		};
-		button.addEventListener('mouseenter', () => {
+		const mouseEnterHandler = () => {
 			timeoutId = setTimeout(() => {
 				button.innerText = 'Yes';
-				console.log('H' + originalContent);
 			}, speed);
-		});
-		button.addEventListener('mouseleave', cleanup);
+		};
+		const mouseLeaveHandler = () => {
+			if (timeoutId) clearTimeout(timeoutId);
+			button.innerText = originalContent;
+		};
+		const mouseEnterId = button.addEventListener(
+			'mouseenter',
+			mouseEnterHandler
+		);
+		const mouseLeaveId = button.addEventListener(
+			'mouseleave',
+			mouseLeaveHandler
+		);
 
+		const cleanup = () => {
+			console.log(button);
+			mouseLeaveHandler();
+			button.removeEventListener('mouseenter', mouseEnterHandler);
+			button.removeEventListener('mouseleave', mouseLeaveHandler);
+		};
 		//return a cleanup function
 		return cleanup;
 	}

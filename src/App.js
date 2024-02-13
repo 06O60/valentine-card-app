@@ -6,6 +6,7 @@ import defaultSprite from './assets/images/normal/monica-sideways.webp';
 import { useState } from 'react';
 import { getRandomMessage } from './utils/messageHandler.js';
 import getRandomObstacle from './utils/obstacles.js';
+let cleanupFunc = null;
 
 function App({ messages, typesMap }) {
 	const [messageData, setMessageData] = useState({
@@ -38,11 +39,18 @@ function App({ messages, typesMap }) {
 		setObstacle();
 	}
 	function setObstacle() {
+		console.log(cleanupFunc);
+		if (cleanupFunc != null) {
+			console.log(cleanupFunc);
+			cleanupFunc();
+			cleanupFunc = null;
+		}
 		let obstacleFun = getRandomObstacle();
 		const upperBtn = document.getElementsByClassName('btn1')[0];
 		const lowerBtn = document.getElementsByClassName('btn2')[0];
-		let cleanupFunc = obstacleFun(upperBtn, lowerBtn);
-		if (cleanupFunc) cleanupFunc();
+		cleanupFunc = obstacleFun(upperBtn, lowerBtn);
+		console.log(cleanupFunc);
+		console.log('h');
 	}
 	function changeDialog(newMessage) {
 		setTextStylingByType(typesMap.get(newMessage.type), setTextStyling);
