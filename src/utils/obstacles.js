@@ -51,11 +51,28 @@ const obstacles = [
 		};
 		//return a cleanup function
 		return cleanup;
-	}
+	},
 	/*TODO: implement reverse function; show to yes's and if you hover on one of them long enough, it will show no  */
+	function fullScreenYes(button1, button2) {
+		button1.style.innerText = 'Yes';
+		button1.style.maxWidth = '100vw';
+		button1.style.maxHeight = '100vh';
+		button1.style.width = '100vw';
+		button1.style.height = '100vh';
+		button1.style.position = 'fixed';
+		button1.style.margin = 0;
+		button1.parentNode.className = '';
+		button1.style.zIndex = 999;
+		button1.style.left = 0;
+		button1.display = 'flex';
+	}
 ];
 
 export default function getRandomObstacle() {
-	let obstacleId = Math.floor(Math.random() * obstacles.length);
+	let obstacleId = Math.floor(Math.random() * (obstacles.length - 1));
 	return obstacles[obstacleId];
+}
+
+export function getFinalObstacle() {
+	return obstacles[obstacles.length - 1];
 }

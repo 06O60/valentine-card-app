@@ -1,12 +1,16 @@
 import React from 'react';
 import '../assets/styles/textbox.css';
 import Typewriter from './Typewriter';
-const TextBox = ({ character, text, textStyling }) => {
+const TextBox = ({ character, text, textStyling, afterRender }) => {
 	return (
 		<div className="text-box">
 			<p className="character">{character}</p>
 			<div className="text-field">
-				<Typewriter text={text} textStyling={textStyling} />
+				<Typewriter
+					text={text}
+					textStyling={textStyling}
+					afterRender={afterRender}
+				/>
 			</div>
 		</div>
 	);

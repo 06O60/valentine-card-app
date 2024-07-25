@@ -5,10 +5,28 @@ import Character, { setSpriteByType } from './components/Character.js';
 import defaultSprite from './assets/images/normal/monica-sideways.webp';
 import { useState } from 'react';
 import { getRandomMessage } from './utils/messageHandler.js';
-import getRandomObstacle from './utils/obstacles.js';
+import getRandomObstacle, { getFinalObstacle } from './utils/obstacles.js';
+
 let cleanupFunc = null;
+let noCounter = 0;
 
 function App({ messages, typesMap }) {
+	function showButtons() {
+		if (document.getElementsByClassName('btn1').length > 0) {
+			const upperBtn = document.getElementsByClassName('btn1')[0];
+			upperBtn.style.display = 'block';
+		}
+		if (document.getElementsByClassName('btn2').length > 0) {
+			const lowerBtn = document.getElementsByClassName('btn2')[0];
+			lowerBtn.style.display = 'block';
+		} else {
+			const secondMessage =
+				'Now that you agreed, you deserve to get those carrot cupcakes! Also congratulations! You unlocked a new poem called "Stasiu rewind 2"!';
+
+			changeDialog({ type: 'End', text: secondMessage });
+		}
+	}
+
 	const [messageData, setMessageData] = useState({
 		type: 'Normal',
 		text: 'Will you be my valentine...?'
@@ -25,34 +43,54 @@ function App({ messages, typesMap }) {
 	}
 
 	function handleYes() {
-		console.log('Yay! Thank you!');
-	}
-	function showEnd() {
-		console.log('Show end TBI');
+		document.getElementsByClassName('btn1')[0].remove();
+		document.getElementsByClassName('btn2')[0].remove();
+		let newMessage = {
+			type: 'End',
+			text: "Yayyy! I actually didn't expect you to agree so quickly..."
+		};
+		if (noCounter > 5)
+			newMessage = { type: 'End', text: 'Took you a while to agree...' };
+
+		const secondMessage =
+			'Now that you agreed, you deserve to get those carrot cupcakes! Also congratulations! You unlocked a new poem called "Stasiu rewind 2"!';
+
+		changeDialog(newMessage);
 	}
 
 	function handleNo() {
+		noCounter++;
 		const newMessage = getRandomMessage(messages);
 
 		changeDialog(newMessage);
 		setSpriteByType(typesMap.get(newMessage.type), setSprite);
-		setObstacle();
+		setObstacle(newMessage.type);
 	}
-	function setObstacle() {
-		console.log(cleanupFunc);
+	function setObstacle(type) {
 		if (cleanupFunc != null) {
-			console.log(cleanupFunc);
 			cleanupFunc();
 			cleanupFunc = null;
 		}
 		let obstacleFun = getRandomObstacle();
+		if (type == 'End') obstacleFun = getFinalObstacle();
 		const upperBtn = document.getElementsByClassName('btn1')[0];
 		const lowerBtn = document.getElementsByClassName('btn2')[0];
 		cleanupFunc = obstacleFun(upperBtn, lowerBtn);
-		console.log(cleanupFunc);
-		console.log('h');
+	}
+
+	function hideButtons() {
+		if (document.getElementsByClassName('btn1').length > 0) {
+			const upperBtn = document.getElementsByClassName('btn1')[0];
+			upperBtn.style.display = 'none';
+		}
+
+		if (document.getElementsByClassName('btn2').length > 0) {
+			const lowerBtn = document.getElementsByClassName('btn2')[0];
+			lowerBtn.style.display = 'none';
+		}
 	}
 	function changeDialog(newMessage) {
+		hideButtons();
 		setTextStylingByType(typesMap.get(newMessage.type), setTextStyling);
 		setMessageData(newMessage);
 	}
@@ -77,6 +115,7 @@ function App({ messages, typesMap }) {
 						character="Monika"
 						text={messageData.text}
 						textStyling={textStyling}
+						afterRender={showButtons}
 					/>
 				</div>
 			</main>

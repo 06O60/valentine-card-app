@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useTypewriter = (text, speed = 50) => {
+const useTypewriter = (text, speed = 50, afterRender = () => {}) => {
 	const [printedText, setPrintedText] = useState('');
 	const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -18,6 +18,7 @@ const useTypewriter = (text, speed = 50) => {
 				setCurrentIndex(currentIndex + 1);
 			} else {
 				clearInterval(printingInterval);
+				afterRender();
 			}
 		}, speed);
 
