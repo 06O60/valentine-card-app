@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/valentine-card-app/static/css/main.837c768c.css",
+    "main.js": "/valentine-card-app/static/js/main.f1df82aa.js",
+    "static/js/592.10cded99.chunk.js": "/valentine-card-app/static/js/592.10cded99.chunk.js",
+    "static/media/monica-front-confident.png": "/valentine-card-app/static/media/monica-front-confident.70d6f767192fac4d8ce8.png",
+    "static/media/SourceCodePro.ttf": "/valentine-card-app/static/media/SourceCodePro.46e9d73a686e6dc90ddc.ttf",
+    "static/media/monica-glitch-1.webp": "/valentine-card-app/static/media/monica-glitch-1.4d7e0b072e48e93b84fd.webp",
+    "static/media/monica-glitch-2.webp": "/valentine-card-app/static/media/monica-glitch-2.9b35e52a52a0c60e50c4.webp",
+    "static/media/monica-glitch-3.webp": "/valentine-card-app/static/media/monica-glitch-3.2c709d65f8105d0fffb5.webp",
+    "static/media/monica-cursed.png": "/valentine-card-app/static/media/monica-cursed.a2ebcdc9ad81377c28d0.png",
+    "static/media/monica-soft-glitch.webp": "/valentine-card-app/static/media/monica-soft-glitch.e8395edf84a2adae8eb7.webp",
+    "static/media/classroom.webp": "/valentine-card-app/static/media/classroom.f218e4fb8b40ad2d9172.webp",
+    "static/media/Aller.ttf": "/valentine-card-app/static/media/Aller.813645bfbe6d696b9405.ttf",
+    "static/media/monica-lecturing.webp": "/valentine-card-app/static/media/monica-lecturing.2506501e5aaea1183a54.webp",
+    "static/media/RifficFree-Bold.ttf": "/valentine-card-app/static/media/RifficFree-Bold.b46b5c87636efd7b6685.ttf",
+    "static/media/monica-sideways.webp": "/valentine-card-app/static/media/monica-sideways.9b30db3e75b21bbe9eb2.webp",
+    "static/media/textbox.png": "/valentine-card-app/static/media/textbox.4e0ebe9f1b10bd6ab41f.png",
+    "index.html": "/valentine-card-app/index.html",
+    "main.837c768c.css.map": "/valentine-card-app/static/css/main.837c768c.css.map",
+    "main.f1df82aa.js.map": "/valentine-card-app/static/js/main.f1df82aa.js.map",
+    "592.10cded99.chunk.js.map": "/valentine-card-app/static/js/592.10cded99.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.837c768c.css",
+    "static/js/main.f1df82aa.js"
+  ]
+}
